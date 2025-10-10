@@ -1,0 +1,1 @@
+qualtrics_env\Scripts\activate
