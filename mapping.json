@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "version": 16,
+    "notes": [
+      "Added QID10 (fare_category) from page7.html.",
+      "Keeps short CSV headers everywhere.",
+      "QID11 (when issued) kept as combobox by visible text."
+    ]
+  },
+  "start_url": "https://samtranscore.sjc1.qualtrics.com/jfe/form/SV_1Sr8UDzSeUWm20e?RID=CGC_NlYyJUotAxWDit6&Q_CHL=email",
+  "skip_columns": [
+    "timestamp",
+    "week",
+    "email",
+    "unnamed_31",
+    "ts_eligibility_yes_no",
+    "ts_smartpass_eligible",
+    "ts_eligibility_date",
+    "ts_additional_info_sent",
+    "ts_additional_info_email_date",
+    "ts_final_eligibility_sent",
+    "ts_final_email_date",
+    "gsc_purchased_yes_no",
+    "gsc_purchased_date",
+    "whiztag",
+    "notes_1_make_the_record_of_last_purchased_paid_sep_18_2025_2_lost_gopass_and_loaded_to_new_clipper_card_loaded_new_card_12121200001_sep_18_2025",
+    "ts_survey_filled_by",
+    "ts_survey_filled_yes_no",
+    "ts_portal_processed_yes_no"
+  ],
+  "text": [
+    {
+      "id": "form-text-input-QID9-1",
+      "csv": "first_name"
+    },
+    {
+      "id": "form-text-input-QID9-2",
+      "csv": "middle_name"
+    },
+    {
+      "id": "form-text-input-QID9-3",
+      "csv": "last_name"
+    },
+    {
+      "css": "input[aria-labelledby='question-display-QID72']",
+      "csv": "clipper_serial"
+    },
+    {
+      "css": "input[aria-labelledby='question-display-QID35']",
+      "csv": "home_zip_code"
+    },
+    {
+      "css": "input[aria-labelledby='question-display-QID74']",
+      "csv": "confirm_the_email_address_where_you_would_like_to_receive_communications_from_caltrain"
+    },
+    {
+      "css": "input[aria-labelledby='question-display-QID12']",
+      "csv": "sjsu_email"
+    }
+  ],
+  "radio": [
+    {
+      "group": "QID4",
+      "csv": "agreement",
+      "default_if_nonempty": "#mc-choice-input-QID4-1",
+      "value_map": {
+        "Yes": "1",
+        "Agree": "1",
+        "No": "2",
+        "Do not agree": "2"
+      }
+    },
+    {
+      "group": "QID71",
+      "csv": "would_you_like_gopass_on_a_clipper_you_own",
+      "value_map": {
+        "Yes": "1",
+        "No": "2"
+      }
+    },
+    {
+      "group": "QID10",
+      "csv": "fare_category",
+      "value_map": {
+        "Adult (19 through 64)": "1",
+        "Youth (18 years and younger)": "2",
+        "Youth (18 and younger)": "2",
+        "Senior (Age 65 and older)": "3",
+        "Other (please specify):": "4",
+        "Disabled": "5",
+        "Medicare Cardholder": "6"
+      },
+      "other_text_css": "input[aria-labelledby='choice-display-QID10-4']"
+    },
+    {
+      "group": "QID15",
+      "csv": "did_you_ride_caltrain_before_gopass",
+      "value_map": {
+        "Yes": "2",
+        "No": "3"
+      }
+    },
+    {
+      "group": "QID63",
+      "csv": "prior_ticket_type",
+      "value_map": {
+        "One-way ticket (paper ticket)": "1",
+        "Day Pass (paper ticket)": "2",
+        "Clipper: Caltrain Monthly Pass": "3",
+        "Other (please specify):": "4",
+        "Clipper: Cash Value": "5"
+      },
+      "other_choice_selector": "#mc-choice-input-QID63-4",
+      "other_text_css": "input[type='text'][aria-labelledby='choice-display-QID63-4']"
+    },
+    {
+      "group": "QID17",
+      "csv": "prior_riding_frequency",
+      "value_map": {
+        "6-7 days/week": "1",
+        "5 days/week": "3",
+        "4 days/week": "7",
+        "3 days/week": "8",
+        "2 days/week": "9",
+        "1 day/week": "4",
+        "1-3 days/month": "5",
+        "Less than once a month": "6"
+      }
+    },
+    {
+      "group": "QID18",
+      "csv": "prior_trip_purpose",
+      "value_map": {
+        "Work": "1",
+        "Sporting Events": "2",
+        "Shopping or Personal Errands": "3",
+        "Social or Recreational": "4",
+        "Airport (SFO, San Jose Int'l)": "5",
+        "School": "6",
+        "Other (please specify):": "7",
+        "Healthcare or Medical": "8"
+      },
+      "other_text_css": "[aria-label='choice-display-QID18-7'] input[type='text']"
+    },
+    {
+      "group": "QID21",
+      "csv": "what_will_be_your_most_common_trip_purpose",
+      "value_map": {
+        "Work": "1",
+        "Sporting Events": "2",
+        "Shopping or Personal Errands": "3",
+        "Social or Recreational": "4",
+        "Airport (SFO, San Jose Int'l)": "5",
+        "School": "6",
+        "Other (please specify):": "7",
+        "Healthcare or Medical": "8"
+      },
+      "other_text_css": "[aria-label='choice-display-QID21-7'] input[type='text']"
+    },
+    {
+      "group": "QID22",
+      "csv": "future_riding_frequency",
+      "value_map": {
+        "6-7 days/week": "1",
+        "5 days/week": "3",
+        "4 days/week": "8",
+        "3 days/week": "4",
+        "2 days/week": "5",
+        "1 day/week": "7",
+        "1 days/week": "7",
+        "1-3 days/month": "9",
+        "Less than once a month": "6"
+      }
+    },
+    {
+      "group": "QID24",
+      "csv": "english_proficiency",
+      "value_map": {
+        "Very well": "1",
+        "Well": "2",
+        "Not Well": "3",
+        "Not at all": "4"
+      }
+    },
+    {
+      "group": "QID25",
+      "csv": "english_spoken_home",
+      "value_map": {
+        "Very well": "1",
+        "Well": "2",
+        "Not Well": "3",
+        "Not at all": "4"
+      }
+    },
+    {
+      "group": "QID30",
+      "csv": "how_many_people_live_in_your_household",
+      "value_map": {
+        "1": "1",
+        "1 (me)": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "6+": "6",
+        "6 or more": "6",
+        "6 or more (please specify):": "6"
+      },
+      "other_text_css": "input[aria-labelledby='choice-display-QID30-6']"
+    },
+    {
+      "group": "QID31",
+      "csv": "household_income",
+      "value_map": {
+        "Less than $25,000/year": "1",
+        "Less than $25,000": "1",
+        "$25,000 - $29,999": "2",
+        "$25,000 to $29,999": "2",
+        "$30,000 - $39,999": "3",
+        "$30,000 to $39,999": "3",
+        "$40,000 - $49,999": "4",
+        "$40,000 to $49,999": "4",
+        "$50,000 - $59,999": "5",
+        "$50,000 to $59,999": "5",
+        "$60,000 - $69,999": "12",
+        "$60,000 to $69,999": "12",
+        "$70,000 - $79,999": "13",
+        "$70,000 to $79,999": "13",
+        "$80,000 - $89,999": "14",
+        "$80,000 to $89,999": "14",
+        "$90,000 - $99,999": "6",
+        "$90,000 to $99,999": "6",
+        "$100,000 - $149,999": "7",
+        "$100,000 to $149,999": "7",
+        "$150,000 - $199,999": "8",
+        "$150,000 to $199,999": "8",
+        "$200,000 - $249,999": "9",
+        "$200,000 to $249,999": "9",
+        "$250,000 or more": "11",
+        "$250,000+": "11"
+      }
+    }
+  ],
+  "checkbox": [
+    {
+      "group": "QID27",
+      "csv": "languages_home",
+      "value_map": {
+        "English": "1",
+        "Filipino or Tagalog": "2",
+        "Filipino": "2",
+        "Tagalog": "2",
+        "Hindi or other Indian language": "3",
+        "Hindi": "3",
+        "Other Indian language": "3",
+        "Cantonese": "4",
+        "Mandarin": "5",
+        "Mandarin Chinese": "5",
+        "Spanish": "6",
+        "Other (please specify):": "7",
+        "Other": "7"
+      },
+      "other_text_css": "input[aria-labelledby='choice-display-QID27-7']",
+      "multi_delimiter": ","
+    },
+    {
+      "group": "QID28",
+      "csv": "which_of_the_following_best_describes_your_race_ethnic_background_select_all_that_apply",
+      "value_map": {
+        "Asian": "1",
+        "Black or African American": "3",
+        "Black": "3",
+        "African American": "3",
+        "Hispanic or Latino": "4",
+        "Hispanic": "4",
+        "Latino": "4",
+        "Middle Eastern or North African": "8",
+        "Middle Eastern": "8",
+        "North African": "8",
+        "Native American or Alaska Native": "2",
+        "Native American": "2",
+        "Alaska Native": "2",
+        "Native Hawaiian or Other Pacific Islander": "5",
+        "Native Hawaiian": "5",
+        "Other Pacific Islander": "5",
+        "Pacific Islander": "5",
+        "White or European ancestry": "7",
+        "White": "7",
+        "European ancestry": "7",
+        "Other (please specify):": "6",
+        "Other": "6"
+      },
+      "other_text_css": "input[aria-labelledby='choice-display-QID28-6']",
+      "multi_delimiter": ","
+    },
+    {
+      "group": "QID73",
+      "csv": "future_communications_from_caltrain",
+      "value_map": {
+        "Check this box if you would like to participate in future Caltrain surveys": "1",
+        "participate in future Caltrain surveys": "1",
+        "future Caltrain surveys": "1",
+        "Check this box if you would like to receive Caltrain updates and information": "2",
+        "receive Caltrain updates and information": "2",
+        "Caltrain updates and information": "2"
+      },
+      "multi_delimiter": ","
+    }
+  ],
+  "combobox": [
+    {
+      "id": "QID11",
+      "csv": "when_were_you_first_issued_with_a_gopass_first_time_gopass_user_if_this_is_your_first_gopass",
+      "choose_by_text": true
+    },
+    {
+      "id": "QID19",
+      "csv": "prior_to_the_gopass_which_stations_did_you_use_for_your_most_common_trip_on_station",
+      "choose_by_text": true
+    },
+    {
+      "id": "QID79",
+      "csv": "prior_to_the_gopass_which_stations_did_you_use_for_your_most_common_trip_off_station",
+      "choose_by_text": true
+    },
+    {
+      "id": "QID46",
+      "csv": "which_stations_will_you_use_for_your_most_common_trip_on_station",
+      "choose_by_text": true
+    },
+    {
+      "id": "QID80",
+      "csv": "which_stations_will_you_use_for_your_most_common_trip_off_station",
+      "choose_by_text": true
+    }
+  ],
+  "todo": [
+    {
+      "csv": "sjsu_email",
+      "reason": "Standalone SJSU email field not found in provided HTML; only QID74 confirm email is mapped."
+    },
+    {
+      "csv": "sjsu_tower_id",
+      "reason": "No matching control found in provided HTML."
+    }
+  ]
+}

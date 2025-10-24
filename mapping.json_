@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "version": 13,
+    "notes": [
+      "Updated CSV header strings to match the user's data.csv (per action-plan log).",
+      "Added header aliases where CSV includes line breaks/colons/trailing spaces.",
+      "Expanded income value_map with common CSV variants.",
+      "Kept runtime-friendly fallbacks; planner should now resolve most items."
+    ]
+  },
+  "start_url": "https://samtranscore.sjc1.qualtrics.com/jfe/form/SV_1Sr8UDzSeUWm20e?RID=CGC_NlYyJUotAxWDit6&Q_CHL=email",
+  "skip_columns": ["Timestamp"],
+
+  "text": [
+    { "id": "form-text-input-QID9-1", "csv": "First Name" },
+    { "id": "form-text-input-QID9-2", "csv": "Middle Name" },
+    { "id": "form-text-input-QID9-3", "csv": "Last Name" },
+
+    { "css": "input[aria-label='question-display-QID72']", "csv": "If you have a Clipper Card, please enter the ten digital serial number from your Adult Clipper Card. This is required if you have a Clipper Card. " },
+    { "css": "input[aria-label='question-display-QID72']", "csv": "If you have a Clipper Card, please enter the ten digital serial number from your Adult Clipper Card. This is required if you have a Clipper Card." },
+    { "css": "input[aria-label='question-display-QID72']", "csv": "Clipper Serial Number" },
+
+    { "css": "input[aria-labelledby='question-display-QID35']", "csv": "What is your home ZIP code?" },
+    { "css": "input[aria-labelledby='question-display-QID35']", "csv": "Home ZIP code" },
+
+    { "css": "input[aria-labelledby='question-display-QID74']", "csv": "Please confirm the email address where you would like to receive communications from Caltrain:" },
+    { "css": "input[aria-labelledby='question-display-QID74']", "csv": "Please confirm the email address where you would like to receive communications from Caltrain" }
+  ],
+
+  "radio": [
+    {
+      "group": "QID4",
+      "csv": "Agreement",
+      "default_if_nonempty": "#mc-choice-input-QID4-1",
+      "value_map": {
+        "Yes": "1",
+        "Agree": "1",
+        "I certify that I read, understand, and agree with the GoPass Use Acknowledgement terms and conditions.": "1",
+        "No": "2",
+        "Do not agree": "2"
+      }
+    },
+
+    { "group": "QID71", "csv": "Would you like to receive your GoPass on an Adult Clipper Card (digital or physical) that you already own?", "value_map": { "Yes": "1", "No": "2" } },
+    { "group": "QID71", "csv": "Do you currently have a Clipper card?", "value_map": { "Yes": "1", "No": "2" } },
+
+    {
+      "group": "QID10",
+      "csv": "In which \n fare category do you belong?\n",
+      "value_map": {
+        "Adult (19 through 64)": "1",
+        "Youth (18 and younger)": "2",
+        "Senior (65 or older)": "3",
+        "Other (please specify)": "4",
+        "Disabled Cardholder": "5"
+      },
+      "other_text_css": "[aria-label='choice-display-QID10-4'] input[type='text']"
+    },
+    {
+      "group": "QID10",
+      "csv": "In which fare category do you belong?",
+      "value_map": {
+        "Adult (19 through 64)": "1",
+        "Youth (18 and younger)": "2",
+        "Senior (65 or older)": "3",
+        "Other (please specify)": "4",
+        "Disabled Cardholder": "5"
+      },
+      "other_text_css": "[aria-label='choice-display-QID10-4'] input[type='text']"
+    },
+
+    { "group": "QID15", "csv": "Did you ride Caltrain before having a GoPass?", "value_map": { "Yes": "2", "No": "3" } },
+    { "group": "QID15", "csv": "Prior to receiving your GoPass did you ride Caltrain at least once per week?", "value_map": { "Yes": "2", "No": "3" } },
+
+    {
+      "group": "QID63",
+      "csv": "What ticket did you typically use prior to the GoPass?",
+      "value_map": {
+        "One-way ticket (paper ticket)": "1",
+        "Day Pass (paper ticket)": "2",
+        "Clipper: Caltrain Monthly Pass": "3",
+        "Other (please specify):": "4",
+        "Clipper: Cash Value": "5"
+      },
+      "other_text_css": "[aria-label='choice-display-QID63-4'] input[type='text']"
+    },
+    {
+      "group": "QID63",
+      "csv": "Before receiving your GoPass, what type of Caltrain ticket did you most often purchase?",
+      "value_map": {
+        "One-way ticket (paper ticket)": "1",
+        "Day Pass (paper ticket)": "2",
+        "Clipper: Caltrain Monthly Pass": "3",
+        "Other (please specify):": "4",
+        "Clipper: Cash Value": "5"
+      },
+      "other_text_css": "[aria-label='choice-display-QID63-4'] input[type='text']"
+    },
+
+    {
+      "group": "QID17",
+      "csv": "Prior to the GoPass, how often did you ride Caltrain?",
+      "value_map": {
+        "6-7 days/week": "1",
+        "5 days/week": "3",
+        "4 days/week": "7",
+        "3 days/week": "8",
+        "2 days/week": "9",
+        "1 day/week": "4",
+        "1-3 days/month": "5",
+        "Less than once a month": "6"
+      }
+    },
+    {
+      "group": "QID17",
+      "csv": "Before receiving your GoPass, how often did you ride Caltrain?",
+      "value_map": {
+        "6-7 days/week": "1",
+        "5 days/week": "3",
+        "4 days/week": "7",
+        "3 days/week": "8",
+        "2 days/week": "9",
+        "1 day/week": "4",
+        "1-3 days/month": "5",
+        "Less than once a month": "6"
+      }
+    },
+
+    {
+      "group": "QID18",
+      "csv": "Prior to the GoPass, what was your most common trip purpose?",
+      "value_map": {
+        "Work": "1",
+        "Sporting Events": "2",
+        "Shopping or Personal Errands": "3",
+        "Social or Recreational": "4",
+        "Airport (SFO, San Jose Int'l)": "5",
+        "School": "6",
+        "Other (please specify):": "7",
+        "Healthcare or Medical": "8"
+      },
+      "other_text_css": "[aria-label='choice-display-QID18-7'] input[type='text']"
+    },
+    {
+      "group": "QID18",
+      "csv": "Before receiving your GoPass, what was your most common trip purpose?",
+      "value_map": {
+        "Work": "1",
+        "Sporting Events": "2",
+        "Shopping or Personal Errands": "3",
+        "Social or Recreational": "4",
+        "Airport (SFO, San Jose Int'l)": "5",
+        "School": "6",
+        "Other (please specify):": "7",
+        "Healthcare or Medical": "8"
+      },
+      "other_text_css": "[aria-label='choice-display-QID18-7'] input[type='text']"
+    },
+
+    {
+      "group": "QID21",
+      "csv": "After receiving your 2026 GoPass, what will be your most common trip purpose?",
+      "value_map": {
+        "Work": "1",
+        "Sporting Events": "2",
+        "Shopping or Personal Errands": "3",
+        "Social or Recreational": "4",
+        "Airport (SFO, San Jose Int'l)": "5",
+        "School": "6",
+        "Other (please specify):": "7",
+        "Healthcare or Medical": "8"
+      },
+      "other_text_css": "[aria-label='choice-display-QID21-7'] input[type='text']"
+    },
+    {
+      "group": "QID21",
+      "csv": "What will be your most common trip purpose?",
+      "value_map": {
+        "Work": "1",
+        "Sporting Events": "2",
+        "Shopping or Personal Errands": "3",
+        "Social or Recreational": "4",
+        "Airport (SFO, San Jose Int'l)": "5",
+        "School": "6",
+        "Other (please specify):": "7",
+        "Healthcare or Medical": "8"
+      },
+      "other_text_css": "[aria-label='choice-display-QID21-7'] input[type='text']"
+    },
+
+    {
+      "group": "QID22",
+      "csv": "How often do you plan to ride Caltrain after receiving your 2026 GoPass?",
+      "value_map": {
+        "6-7 days/week": "1",
+        "5 days/week": "3",
+        "4 days/week": "8",
+        "3 days/week": "4",
+        "2 days/week": "5",
+        "1 day/week": "7",
+        "1-3 days/month": "9",
+        "Less than once a month": "6"
+      }
+    },
+
+    { "group": "QID24", "csv": "How well do you speak English?", "value_map": { "Very well": "1", "Well": "2", "Not Well": "3", "Not at all": "4" } },
+
+    { "group": "QID25", "csv": "In your home, is English spoken:\n", "value_map": { "Very well": "1", "Well": "2", "Not Well": "3", "Not at all": "4" } },
+    { "group": "QID25", "csv": "In your home, is English spoken:", "value_map": { "Very well": "1", "Well": "2", "Not Well": "3", "Not at all": "4" } },
+
+    { "group": "QID30", "csv": "Including yourself, how many people live in your household?", "value_map": { "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6 or more": "6" } },
+    { "group": "QID30", "csv": "How many people live in your household?", "value_map": { "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6 or more": "6" } },
+
+    {
+      "group": "QID31",
+      "csv": "Annual household income (before taxes):",
+      "value_map": {
+        "Less than $25,000": "1",
+        "$25,000 to $49,999": "2",
+        "$25,000 - $49,999": "2",
+        "$40,000 - $49,999": "2",
+        "$50,000 to $74,999": "3",
+        "$50,000 - $74,999": "3",
+        "$75,000 to $99,999": "4",
+        "$75,000 - $99,999": "4",
+        "$100,000 to $149,999": "5",
+        "$100,000 - $149,999": "5",
+        "$150,000 or more": "6",
+        "$150,000+": "6"
+      }
+    }
+  ],
+
+  "checkbox": [
+    {
+      "group": "QID27",
+      "csv": "Which languages are spoken in your home?\n(Select all that apply)",
+      "multi_delimiter": ";"
+    },
+    {
+      "group": "QID27",
+      "csv": "Which languages are spoken in your home? (Select all that apply)",
+      "multi_delimiter": ";"
+    },
+
+    {
+      "group": "QID28",
+      "csv": "Which of the following best describes your race/ethnic background? (Select all that apply)",
+      "multi_delimiter": ";"
+    },
+
+    {
+      "group": "QID73",
+      "csv": "Future communications from Caltrain",
+      "value_map": {
+        "Check this box if you would like to participate in future Caltrain surveys": "1",
+        "Check this box if you would like to receive Caltrain updates and information": "2"
+      },
+      "multi_delimiter": ";"
+    }
+  ],
+
+  "combobox": [
+    { "id": "QID19", "csv": "Prior to the GoPass, which Caltrain stations did you use for your most common trip?\n\nOn-station (Boarding Station): The station where you get on the train.  ", "choose_by_text": true },
+    { "id": "QID79", "csv": "Prior to the GoPass, which Caltrain stations did you use for your most common trip?\n\nOff-station (Destination Station): The station where you get off the train.  ", "choose_by_text": true },
+
+    { "id": "QID46", "csv": "Which Caltrain stations will you use for your most common trip?\n\nOn-station (Boarding Station): The station where you get on the train.  ", "choose_by_text": true },
+    { "id": "QID80", "csv": "Which Caltrain stations will you use for your most common trip?\n\nOff-station (Destination Station): The station where you get off the train.  ", "choose_by_text": true }
+  ],
+
+  "todo": [
+    { "csv": "Was this your first time receiving a GoPass?", "reason": "Not located in static HTML snapshot." },
+    { "csv": "SJSU email", "reason": "No explicit field in provided HTML." },
+    { "csv": "Email Address", "reason": "Standalone email field not present (only QID74 confirmation)." },
+    { "csv": "SJSU Tower ID", "reason": "No field in provided HTML." }
+  ]
+}
