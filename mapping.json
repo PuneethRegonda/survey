@@ -246,23 +246,19 @@
     {
       "group": "QID27",
       "csv": "languages_home",
+      "multi_delimiter": ",",
       "value_map": {
         "English": "1",
         "Filipino or Tagalog": "2",
-        "Filipino": "2",
-        "Tagalog": "2",
         "Hindi or other Indian language": "3",
-        "Hindi": "3",
-        "Other Indian language": "3",
         "Cantonese": "4",
         "Mandarin": "5",
-        "Mandarin Chinese": "5",
         "Spanish": "6",
-        "Other (please specify):": "7",
-        "Other": "7"
+        "Other (please specify):": "7"
       },
-      "other_text_css": "input[aria-labelledby='choice-display-QID27-7']",
-      "multi_delimiter": ","
+      "other_choice_selector": "#mc-choice-input-QID27-7",
+      "other_text_css": "label[for='mc-choice-input-QID27-7'] input[type='text']",
+      "auto_other_if_unmatched": true
     },
     {
       "group": "QID28",
