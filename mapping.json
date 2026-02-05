@@ -46,6 +46,10 @@
       "csv": "clipper_serial"
     },
     {
+      "css": "input[aria-labelledby='question-display-QID84']",
+      "csv": "tower_serial"
+    },
+    {
       "css": "input[aria-labelledby='question-display-QID35']",
       "csv": "home_zip_code"
     },
